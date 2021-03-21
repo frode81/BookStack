@@ -26,24 +26,26 @@ return [
     'view' => 'Bekijk',
     'view_all' => 'Bekijk Alle',
     'create' => 'Aanmaken',
-    'update' => 'Update',
+    'update' => 'Bijwerken',
     'edit' => 'Bewerk',
     'sort' => 'Sorteer',
     'move' => 'Verplaats',
     'copy' => 'Kopiëren',
     'reply' => 'Beantwoorden',
     'delete' => 'Verwijder',
+    'delete_confirm' => 'Confirm Deletion',
     'search' => 'Zoek',
     'search_clear' => 'Zoekopdracht wissen',
-    'reset' => 'Reset',
+    'reset' => 'Resetten',
     'remove' => 'Verwijderen',
     'add' => 'Toevoegen',
+    'fullscreen' => 'Volledig scherm',
 
     // Sort Options
-    'sort_options' => 'Sort Options',
-    'sort_direction_toggle' => 'Sort Direction Toggle',
-    'sort_ascending' => 'Sort Ascending',
-    'sort_descending' => 'Sort Descending',
+    'sort_options' => 'Sorteeropties',
+    'sort_direction_toggle' => 'Sorteer richting',
+    'sort_ascending' => 'Sorteer oplopend',
+    'sort_descending' => 'Sorteer teruglopend',
     'sort_name' => 'Naam',
     'sort_created_at' => 'Aanmaakdatum',
     'sort_updated_at' => 'Gewijzigd op',
@@ -59,12 +61,14 @@ return [
     'grid_view' => 'Grid weergave',
     'list_view' => 'Lijst weergave',
     'default' => 'Standaard',
-    'breadcrumb' => 'Breadcrumb',
+    'breadcrumb' => 'Kruimelpad',
 
     // Header
-    'profile_menu' => 'Profile Menu',
+    'profile_menu' => 'Profiel menu',
     'view_profile' => 'Profiel Weergeven',
     'edit_profile' => 'Profiel Bewerken',
+    'dark_mode' => 'Donkere Modus',
+    'light_mode' => 'Lichte Modus',
 
     // Layout tabs
     'tab_info' => 'Info',
@@ -73,4 +77,9 @@ return [
     // Email Content
     'email_action_help' => 'Als je de knop ":actionText" niet werkt, kopieer en plak de onderstaande URL in je web browser:',
     'email_rights' => 'Alle rechten voorbehouden',
+
+    // Footer Link Options
+    // Not directly used but available for convenience to users.
+    'privacy_policy' => 'Privacy Policy',
+    'terms_of_service' => 'Terms of Service',
 ];

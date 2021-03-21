@@ -25,7 +25,7 @@
     </div>
 </div>
 
-@if($authMethod === 'ldap' && userCan('users-manage'))
+@if(($authMethod === 'ldap' || $authMethod === 'saml2') && userCan('users-manage'))
     <div class="grid half gap-xl v-center">
         <div>
             <label class="setting-list-label">{{ trans('settings.users_external_auth_id') }}</label>
@@ -74,7 +74,7 @@
             <div class="grid half mt-m gap-xl">
                 <div>
                     <label for="password">{{ trans('auth.password') }}</label>
-                    @include('form.password', ['name' => 'password'])
+                    @include('form.password', ['name' => 'password', 'autocomplete' => 'new-password'])
                 </div>
                 <div>
                     <label for="password-confirm">{{ trans('auth.password_confirm') }}</label>

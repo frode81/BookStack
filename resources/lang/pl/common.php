@@ -11,7 +11,7 @@ return [
     'save' => 'Zapisz',
     'continue' => 'Kontynuuj',
     'select' => 'Wybierz',
-    'toggle_all' => 'Toggle All',
+    'toggle_all' => 'Przełącz wszystko',
     'more' => 'Więcej',
 
     // Form Labels
@@ -24,7 +24,7 @@ return [
     // Actions
     'actions' => 'Akcje',
     'view' => 'Widok',
-    'view_all' => 'View All',
+    'view_all' => 'Zobacz wszystkie',
     'create' => 'Utwórz',
     'update' => 'Zaktualizuj',
     'edit' => 'Edytuj',
@@ -33,20 +33,22 @@ return [
     'copy' => 'Skopiuj',
     'reply' => 'Odpowiedz',
     'delete' => 'Usuń',
+    'delete_confirm' => 'Potwierdź usunięcie',
     'search' => 'Szukaj',
     'search_clear' => 'Wyczyść wyszukiwanie',
     'reset' => 'Resetuj',
     'remove' => 'Usuń',
     'add' => 'Dodaj',
+    'fullscreen' => 'Pełny ekran',
 
     // Sort Options
-    'sort_options' => 'Sort Options',
-    'sort_direction_toggle' => 'Sort Direction Toggle',
-    'sort_ascending' => 'Sort Ascending',
-    'sort_descending' => 'Sort Descending',
-    'sort_name' => 'Name',
-    'sort_created_at' => 'Created Date',
-    'sort_updated_at' => 'Updated Date',
+    'sort_options' => 'Opcje sortowania',
+    'sort_direction_toggle' => 'Przełącz kierunek sortowania',
+    'sort_ascending' => 'Sortuj rosnąco',
+    'sort_descending' => 'Sortuj malejąco',
+    'sort_name' => 'Nazwa',
+    'sort_created_at' => 'Data utworzenia',
+    'sort_updated_at' => 'Data aktualizacji',
 
     // Misc
     'deleted_user' => 'Użytkownik usunięty',
@@ -59,18 +61,25 @@ return [
     'grid_view' => 'Widok kafelkowy',
     'list_view' => 'Widok listy',
     'default' => 'Domyślny',
-    'breadcrumb' => 'Breadcrumb',
+    'breadcrumb' => 'Ścieżka nawigacji',
 
     // Header
-    'profile_menu' => 'Profile Menu',
+    'profile_menu' => 'Menu profilu',
     'view_profile' => 'Zobacz profil',
     'edit_profile' => 'Edytuj profil',
+    'dark_mode' => 'Tryb ciemny',
+    'light_mode' => 'Tryb jasny',
 
     // Layout tabs
-    'tab_info' => 'Info',
-    'tab_content' => 'Content',
+    'tab_info' => 'Informacje',
+    'tab_content' => 'Treść',
 
     // Email Content
     'email_action_help' => 'Jeśli masz problem z kliknięciem przycisku ":actionText", skopiuj i wklej poniższy adres URL w nowej karcie swojej przeglądarki:',
     'email_rights' => 'Wszelkie prawa zastrzeżone',
+
+    // Footer Link Options
+    // Not directly used but available for convenience to users.
+    'privacy_policy' => 'Privacy Policy',
+    'terms_of_service' => 'Terms of Service',
 ];

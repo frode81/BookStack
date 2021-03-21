@@ -33,17 +33,19 @@ return [
     'copy' => 'Másolás',
     'reply' => 'Válasz',
     'delete' => 'Törlés',
+    'delete_confirm' => 'Törlés megerősítése',
     'search' => 'Keresés',
     'search_clear' => 'Keresés törlése',
     'reset' => 'Visszaállítás',
     'remove' => 'Eltávolítás',
     'add' => 'Hozzáadás',
+    'fullscreen' => 'Teljes képernyő',
 
     // Sort Options
-    'sort_options' => 'Sort Options',
-    'sort_direction_toggle' => 'Sort Direction Toggle',
-    'sort_ascending' => 'Sort Ascending',
-    'sort_descending' => 'Sort Descending',
+    'sort_options' => 'Rendezési beállítások',
+    'sort_direction_toggle' => 'Rendezési irány váltása',
+    'sort_ascending' => 'Növekvő sorrend',
+    'sort_descending' => 'Csökkenő sorrend',
     'sort_name' => 'Név',
     'sort_created_at' => 'Létrehozás dátuma',
     'sort_updated_at' => 'Frissítés dátuma',
@@ -59,12 +61,14 @@ return [
     'grid_view' => 'Rács nézet',
     'list_view' => 'Lista nézet',
     'default' => 'Alapértelmezés szerinti',
-    'breadcrumb' => 'Breadcrumb',
+    'breadcrumb' => 'Morzsa',
 
     // Header
-    'profile_menu' => 'Profile Menu',
+    'profile_menu' => 'Profil menü',
     'view_profile' => 'Profil megtekintése',
     'edit_profile' => 'Profil szerkesztése',
+    'dark_mode' => 'Sötét mód',
+    'light_mode' => 'Világos mód',
 
     // Layout tabs
     'tab_info' => 'Információ',
@@ -73,4 +77,9 @@ return [
     // Email Content
     'email_action_help' => 'Probléma esetén a lenti ":actionText" gombra kell kattintani, majd ki kell másolni a lenti webcímet és be kell illeszteni egy böngészőbe:',
     'email_rights' => 'Minden jog fenntartva',
+
+    // Footer Link Options
+    // Not directly used but available for convenience to users.
+    'privacy_policy' => 'Privacy Policy',
+    'terms_of_service' => 'Terms of Service',
 ];

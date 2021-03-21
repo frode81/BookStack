@@ -2,17 +2,18 @@
 
 namespace BookStack\Http\Controllers\Auth;
 
+use BookStack\Actions\ActivityType;
 use BookStack\Auth\Access\UserInviteService;
 use BookStack\Auth\UserRepo;
 use BookStack\Exceptions\UserTokenExpiredException;
 use BookStack\Exceptions\UserTokenNotFoundException;
+use BookStack\Facades\Theme;
 use BookStack\Http\Controllers\Controller;
+use BookStack\Theming\ThemeEvents;
 use Exception;
-use Illuminate\Contracts\View\Factory;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Redirector;
-use Illuminate\View\View;
 
 class UserInviteController extends Controller
 {
@@ -21,22 +22,18 @@ class UserInviteController extends Controller
 
     /**
      * Create a new controller instance.
-     *
-     * @param UserInviteService $inviteService
-     * @param UserRepo $userRepo
      */
     public function __construct(UserInviteService $inviteService, UserRepo $userRepo)
     {
+        $this->middleware('guest');
+        $this->middleware('guard:standard');
+
         $this->inviteService = $inviteService;
         $this->userRepo = $userRepo;
-        $this->middleware('guest');
-        parent::__construct();
     }
 
     /**
      * Show the page for the user to set the password for their account.
-     * @param string $token
-     * @return Factory|View|RedirectResponse
      * @throws Exception
      */
     public function showSetPassword(string $token)
@@ -54,9 +51,6 @@ class UserInviteController extends Controller
 
     /**
      * Sets the password for an invited user and then grants them access.
-     * @param Request $request
-     * @param string $token
-     * @return RedirectResponse|Redirector
      * @throws Exception
      */
     public function setPassword(Request $request, string $token)
@@ -77,6 +71,8 @@ class UserInviteController extends Controller
         $user->save();
 
         auth()->login($user);
+        Theme::dispatch(ThemeEvents::AUTH_LOGIN, auth()->getDefaultDriver(), $user);
+        $this->logActivity(ActivityType::AUTH_LOGIN, $user);
         $this->showSuccessNotification(trans('auth.user_invite_success', ['appName' => setting('app-name')]));
         $this->inviteService->deleteByUser($user);
 
@@ -85,7 +81,6 @@ class UserInviteController extends Controller
 
     /**
      * Check and validate the exception thrown when checking an invite token.
-     * @param Exception $exception
      * @return RedirectResponse|Redirector
      * @throws Exception
      */

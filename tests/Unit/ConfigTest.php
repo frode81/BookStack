@@ -1,4 +1,7 @@
-<?php namespace Tests;
+<?php namespace Tests\Unit;
+
+use Illuminate\Support\Facades\Log;
+use Tests\TestCase;
 
 /**
  * Class ConfigTest
@@ -34,16 +37,42 @@ class ConfigTest extends TestCase
         $this->checkEnvConfigResult('APP_URL', $oldDefault, 'app.url', '');
     }
 
+    public function test_errorlog_plain_webserver_channel()
+    {
+        // We can't full test this due to it being targeted for the SAPI logging handler
+        // so we just overwrite that component so we can capture the error log output.
+        config()->set([
+            'logging.channels.errorlog_plain_webserver.handler_with' => [0],
+        ]);
+
+        $temp = tempnam(sys_get_temp_dir(), 'bs-test');
+        $original = ini_set( 'error_log', $temp);
+
+        Log::channel('errorlog_plain_webserver')->info('Aww, look, a cute puppy');
+
+        ini_set( 'error_log', $original);
+
+        $output = file_get_contents($temp);
+        $this->assertStringContainsString('Aww, look, a cute puppy', $output);
+        $this->assertStringNotContainsString('INFO', $output);
+        $this->assertStringNotContainsString('info', $output);
+        $this->assertStringNotContainsString('testing', $output);
+    }
+
+    public function test_session_cookie_uses_sub_path_from_app_url()
+    {
+        $this->checkEnvConfigResult('APP_URL', 'https://example.com', 'session.path', '/');
+        $this->checkEnvConfigResult('APP_URL', 'https://a.com/b', 'session.path', '/b');
+        $this->checkEnvConfigResult('APP_URL', 'https://a.com/b/d/e', 'session.path', '/b/d/e');
+        $this->checkEnvConfigResult('APP_URL', '', 'session.path', '/');
+    }
+
     /**
      * Set an environment variable of the given name and value
      * then check the given config key to see if it matches the given result.
      * Providing a null $envVal clears the variable.
-     * @param string $envName
-     * @param string|null $envVal
-     * @param string $configKey
-     * @param string $expectedResult
      */
-    protected function checkEnvConfigResult(string $envName, $envVal, string $configKey, string $expectedResult)
+    protected function checkEnvConfigResult(string $envName, ?string $envVal, string $configKey, string $expectedResult)
     {
         $this->runWithEnv($envName, $envVal, function() use ($configKey, $expectedResult) {
             $this->assertEquals($expectedResult, config($configKey));

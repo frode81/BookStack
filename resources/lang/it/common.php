@@ -33,11 +33,13 @@ return [
     'copy' => 'Copia',
     'reply' => 'Rispondi',
     'delete' => 'Elimina',
+    'delete_confirm' => 'Confirm Deletion',
     'search' => 'Cerca',
     'search_clear' => 'Pulisci Ricerca',
     'reset' => 'Azzera',
     'remove' => 'Rimuovi',
     'add' => 'Aggiungi',
+    'fullscreen' => 'Schermo intero',
 
     // Sort Options
     'sort_options' => 'Opzioni Ordinamento',
@@ -65,6 +67,8 @@ return [
     'profile_menu' => 'Menu del profilo',
     'view_profile' => 'Visualizza Profilo',
     'edit_profile' => 'Modifica Profilo',
+    'dark_mode' => 'Modalità Scura',
+    'light_mode' => 'Modalità Chiara',
 
     // Layout tabs
     'tab_info' => 'Info',
@@ -73,4 +77,9 @@ return [
     // Email Content
     'email_action_help' => 'Se hai problemi nel cliccare il pulsante ":actionText", copia e incolla lo URL sotto nel tuo browser:',
     'email_rights' => 'Tutti i diritti riservati',
+
+    // Footer Link Options
+    // Not directly used but available for convenience to users.
+    'privacy_policy' => 'Privacy Policy',
+    'terms_of_service' => 'Terms of Service',
 ];

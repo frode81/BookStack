@@ -33,17 +33,19 @@ return [
     'copy' => 'Kopiera',
     'reply' => 'Svara',
     'delete' => 'Ta bort',
+    'delete_confirm' => 'Bekräfta radering',
     'search' => 'Sök',
     'search_clear' => 'Rensa sökning',
     'reset' => 'Återställ',
     'remove' => 'Radera',
     'add' => 'Lägg till',
+    'fullscreen' => 'Helskärm',
 
     // Sort Options
-    'sort_options' => 'Sort Options',
-    'sort_direction_toggle' => 'Sort Direction Toggle',
-    'sort_ascending' => 'Sort Ascending',
-    'sort_descending' => 'Sort Descending',
+    'sort_options' => 'Sorteringsalternativ',
+    'sort_direction_toggle' => 'Växla sorteringsriktning',
+    'sort_ascending' => 'Sortera stigande',
+    'sort_descending' => 'Sortera fallande',
     'sort_name' => 'Namn',
     'sort_created_at' => 'Skapad',
     'sort_updated_at' => 'Uppdaterad',
@@ -59,12 +61,14 @@ return [
     'grid_view' => 'Rutnätsvy',
     'list_view' => 'Listvy',
     'default' => 'Förvald',
-    'breadcrumb' => 'Breadcrumb',
+    'breadcrumb' => 'Brödsmula',
 
     // Header
-    'profile_menu' => 'Profile Menu',
+    'profile_menu' => 'Profilmeny',
     'view_profile' => 'Visa profil',
     'edit_profile' => 'Redigera profil',
+    'dark_mode' => 'Mörkt läge',
+    'light_mode' => 'Ljust Läge',
 
     // Layout tabs
     'tab_info' => 'Information',
@@ -73,4 +77,9 @@ return [
     // Email Content
     'email_action_help' => 'Om du har problem, klicka på knappen ":actionText", och kopiera och klistra in den här adressen i din webbläsare:',
     'email_rights' => 'Alla rättigheter är reserverade',
+
+    // Footer Link Options
+    // Not directly used but available for convenience to users.
+    'privacy_policy' => 'Privacy Policy',
+    'terms_of_service' => 'Terms of Service',
 ];

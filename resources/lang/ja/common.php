@@ -33,11 +33,13 @@ return [
     'copy' => 'Copy',
     'reply' => '返信',
     'delete' => '削除',
+    'delete_confirm' => 'Confirm Deletion',
     'search' => '検索',
     'search_clear' => '検索をクリア',
     'reset' => 'リセット',
     'remove' => '削除',
     'add' => '追加',
+    'fullscreen' => 'Fullscreen',
 
     // Sort Options
     'sort_options' => 'Sort Options',
@@ -65,6 +67,8 @@ return [
     'profile_menu' => 'Profile Menu',
     'view_profile' => 'プロフィール表示',
     'edit_profile' => 'プロフィール編集',
+    'dark_mode' => 'Dark Mode',
+    'light_mode' => 'Light Mode',
 
     // Layout tabs
     'tab_info' => 'Info',
@@ -73,4 +77,9 @@ return [
     // Email Content
     'email_action_help' => '":actionText" をクリックできない場合、以下のURLをコピーしブラウザで開いてください:',
     'email_rights' => 'All rights reserved',
+
+    // Footer Link Options
+    // Not directly used but available for convenience to users.
+    'privacy_policy' => 'Privacy Policy',
+    'terms_of_service' => 'Terms of Service',
 ];

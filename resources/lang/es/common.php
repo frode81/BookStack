@@ -33,11 +33,13 @@ return [
     'copy' => 'Copiar',
     'reply' => 'Responder',
     'delete' => 'Borrar',
+    'delete_confirm' => 'Confirmar borrado',
     'search' => 'Buscar',
     'search_clear' => 'Limpiar búsqueda',
     'reset' => 'Resetear',
     'remove' => 'Remover',
     'add' => 'Añadir',
+    'fullscreen' => 'Pantalla completa',
 
     // Sort Options
     'sort_options' => 'Opciones de ordenación',
@@ -65,6 +67,8 @@ return [
     'profile_menu' => 'Menú de Perfil',
     'view_profile' => 'Ver Perfil',
     'edit_profile' => 'Editar Perfil',
+    'dark_mode' => 'Modo Oscuro',
+    'light_mode' => 'Modo Claro',
 
     // Layout tabs
     'tab_info' => 'Información',
@@ -73,4 +77,9 @@ return [
     // Email Content
     'email_action_help' => 'Si está teniendo problemas clicando en el botón ":actionText", copie y pegue la siguiente URL en su navegador web:',
     'email_rights' => 'Todos los derechos reservados',
+
+    // Footer Link Options
+    // Not directly used but available for convenience to users.
+    'privacy_policy' => 'Política de privacidad',
+    'terms_of_service' => 'Términos de Servicio',
 ];
